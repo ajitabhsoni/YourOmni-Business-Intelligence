@@ -1,0 +1,332 @@
+/* Global Styles */
+body {
+  background: #f4f6f9;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.shadow {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05) !important;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Global */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Dashboard stats cards - 2 per row */
+  .row.g-3 .col-6 {
+    padding: 0 6px;
+  }
+  
+  .row.g-3 .col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 12px;
+  }
+  
+  /* Card padding */
+  .card-body {
+    padding: 0.75rem !important;
+  }
+  
+  /* Tables - horizontal scroll */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  table {
+    min-width: 500px;
+  }
+  
+  .table td, .table th {
+    padding: 0.5rem;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 12px;
+  }
+  
+  .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 11px;
+  }
+  
+  /* Forms */
+  .form-control, .form-select {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+  
+  /* Typography */
+  h2 {
+    font-size: 1.35rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  h3 {
+    font-size: 1.2rem !important;
+  }
+  
+  h4 {
+    font-size: 1rem !important;
+  }
+  
+  h5 {
+    font-size: 0.95rem !important;
+  }
+  
+  p, .text-muted {
+    font-size: 12px;
+  }
+  
+  /* Grid spacing */
+  .g-3 {
+    --bs-gutter-y: 0.75rem;
+    --bs-gutter-x: 0.75rem;
+  }
+  
+  /* Alerts */
+  .alert {
+    padding: 0.75rem;
+    font-size: 12px;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+  
+  /* Charts */
+  canvas {
+    max-height: 220px !important;
+  }
+  
+  /* Datasets page - buttons wrap */
+  .d-flex.gap-2 {
+    flex-wrap: wrap;
+  }
+  
+  .d-flex.gap-2 .btn {
+    margin-bottom: 5px;
+  }
+  
+  /* Welcome header */
+  .p-4.mb-4 {
+    padding: 1rem !important;
+  }
+  
+  /* Profile image in header */
+  .position-relative img.rounded-circle {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  /* Quick action buttons */
+  .btn-outline-primary.p-3,
+  .btn-outline-success.p-3,
+  .btn-outline-warning.p-3,
+  .btn-outline-dark.p-3 {
+    padding: 0.75rem !important;
+  }
+  
+  /* Chat page */
+  .chat-bubble {
+    max-width: 85% !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .row.g-3 .col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .p-3 {
+    padding: 0.75rem !important;
+  }
+  
+  .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 11px;
+  }
+  
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Stack buttons in datasets */
+  .card .d-flex.justify-content-between {
+    flex-direction: column;
+  }
+  
+  .card .d-flex.justify-content-between .d-flex.gap-2 {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Sidebar scrollbar */
+.sidebar-main::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-main::-webkit-scrollbar-track {
+  background: #2c5364;
+}
+
+.sidebar-main::-webkit-scrollbar-thumb {
+  background: #4e73df;
+  border-radius: 4px;
+}
+
+/* Better touch targets */
+button, 
+.btn, 
+a, 
+[role="button"],
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+/* Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* ========== FIXED: TABLE HORIZONTAL SCROLL ========== */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table-responsive-custom {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+
+/* Make all tables scrollable on mobile */
+@media (max-width: 768px) {
+  .table-responsive,
+  .table-responsive-sm,
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Force all tables to be scrollable */
+  table:not(.table-fixed) {
+    display: table;
+    min-width: 600px;
+    width: 100%;
+  }
+  
+  .table {
+    min-width: 650px;
+  }
+  
+  /* Fix for Offers table */
+  .offers-table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .offers-table {
+    min-width: 800px;
+  }
+  
+  /* Fix for buttons in table */
+  .table td .btn-group,
+  .table td .d-flex {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+  
+  .table td .btn {
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    font-size: 11px;
+  }
+  
+  /* Ensure action buttons are visible */
+  .table td:last-child,
+  .table th:last-child {
+    position: sticky;
+    right: 0;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1;
+  }
+  
+  /* For dark table headers */
+  .table thead th:last-child {
+    background: #f8f9fc;
+  }
+}

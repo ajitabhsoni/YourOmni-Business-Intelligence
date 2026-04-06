@@ -1,0 +1,51 @@
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  background: #efeae2;
+}
+
+.chat-header {
+  background: white;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  padding: 10px;
+  background: white;
+}
+
+.chat-bubble {
+  max-width: 60%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  position: relative;
+  font-size: 14px;
+}
+
+.chat-bubble.mine {
+  background: #dcf8c6;
+}
+
+.chat-bubble.theirs {
+  background: white;
+  border: 1px solid #eee;
+}
+
+.ticks {
+  font-size: 10px;
+  margin-left: 6px;
+  color: gray;
+}
+
+.msg-time {
+  font-size: 10px;
+  text-align: right;
+  margin-top: 3px;
+  opacity: 0.6;
+}
