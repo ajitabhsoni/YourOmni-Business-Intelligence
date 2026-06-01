@@ -35,7 +35,7 @@ export default function Layout({ children }) {
       if (storedImage.startsWith("http")) {
         profileImage = storedImage;
       } else {
-        profileImage = "http://localhost:5000/uploads/" + storedImage;
+        profileImage = "https://YOUR-RENDER-URL.onrender.com/uploads/" + storedImage;
       }
     }
     
