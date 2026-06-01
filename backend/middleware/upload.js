@@ -9,7 +9,10 @@ const fileFilter = (req, file, cb) => {
   const allowedTypes = [
     "text/csv",
     "application/pdf",
-    "application/vnd.ms-excel"
+    "application/vnd.ms-excel",
+    "image/jpeg",
+  "image/png",
+  "image/webp"
   ];
 
   if (allowedTypes.includes(file.mimetype)) {
