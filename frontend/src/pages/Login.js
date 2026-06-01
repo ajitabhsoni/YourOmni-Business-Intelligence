@@ -46,7 +46,7 @@ export default function Login() {
           localStorage.setItem("profileImage", res.data.user.profileImage);
         } else {
           // If it's just a filename
-          localStorage.setItem("profileImage", "http://localhost:5000/uploads/" + res.data.user.profileImage);
+          localStorage.setItem("profileImage", "https://YOUR-RENDER-URL.onrender.com/uploads/" + res.data.user.profileImage);
         }
       } else {
         localStorage.setItem("profileImage", "");
