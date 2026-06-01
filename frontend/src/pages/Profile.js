@@ -21,7 +21,7 @@ export default function Profile() {
       
       // Store FULL image URL
       if (res.data.profileImage) {
-        const fullImageUrl = "http://localhost:5000/uploads/" + res.data.profileImage;
+        const fullImageUrl = "https://YOUR-RENDER-URL.onrender.com/uploads/" + res.data.profileImage;
         localStorage.setItem("profileImage", fullImageUrl);
       }
     } catch (error) {
@@ -64,7 +64,7 @@ export default function Profile() {
           <img
             src={
               user.profileImage
-                ? "http://localhost:5000/uploads/" + user.profileImage
+                ? "https://YOUR-RENDER-URL.onrender.com/uploads/" + user.profileImage
                 : `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=4e73df&color=ffffff&bold=true&size=128`
             }
             alt="avatar"
